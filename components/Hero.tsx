@@ -41,7 +41,7 @@ export default function Hero() {
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-10 font-light max-w-md border-l-2 border-[#AC58E9]/50 pl-6">
               INFINITICA is a global AI-led product company. We build intelligent products that solve meaningful real-world problems and create measurable human and economic value.
             </p>
-            <Link
+            {/* <Link
               href="#products"
               className="inline-flex items-center gap-4 text-black font-semibold hover:bg-[#AC58E9] hover:text-white transition-all duration-300 group w-fit bg-white px-6 py-3 rounded-none border border-white"
             >
@@ -49,7 +49,7 @@ export default function Hero() {
               <div className="w-8 h-8 rounded-none bg-black flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                 <ChevronRight className="w-4 h-4" />
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

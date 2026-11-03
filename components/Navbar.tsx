@@ -26,59 +26,17 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex items-center justify-center space-x-8 flex-1">
-            <Link
-              href="#features"
-              className="text-[15px] font-medium text-zinc-300 hover:text-[#AC58E9] transition-colors duration-200"
-            >
-              Features
-            </Link>
-            <Link
-              href="#about"
-              className="text-[15px] font-medium text-zinc-300 hover:text-[#AC58E9] transition-colors duration-200"
-            >
-              About us
-            </Link>
-            <Link
-              href="#pricing"
-              className="text-[15px] font-medium text-zinc-300 hover:text-[#AC58E9] transition-colors duration-200"
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#blog"
-              className="text-[15px] font-medium text-zinc-300 hover:text-[#AC58E9] transition-colors duration-200"
-            >
-              Blog
-            </Link>
-            <Link
-              href="#contact"
-              className="text-[15px] font-medium text-zinc-300 hover:text-[#AC58E9] transition-colors duration-200"
-            >
-              Contact
-            </Link>
-          </div>
+       
 
           {/* Action Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <button
-              aria-label="Shopping Cart"
-              className="p-2.5 rounded-none border border-white/10 text-zinc-300 hover:text-[#AC58E9] hover:border-[#AC58E9] transition-all duration-200 flex items-center justify-center bg-[#111]"
-            >
-              <ShoppingCart className="w-[18px] h-[18px]" />
-            </button>
-            <button
-              aria-label="User Profile"
-              className="p-2.5 rounded-none border border-transparent text-zinc-300 hover:text-[#AC58E9] hover:border-white/10 transition-all duration-200 flex items-center justify-center bg-transparent hover:bg-[#111]"
-            >
-              <User className="w-[18px] h-[18px]" />
-            </button>
+          
+         
             <Link
               href="#get-started"
-              className="bg-white text-black border border-white font-semibold text-[14px] px-6 py-2.5 rounded-none hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] active:scale-95 transition-all duration-200 tracking-tight"
+              className="bg-white text-black border border-white font-semibold text-[15px] px-6 py-2.5 rounded-none hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] active:scale-95 transition-all duration-200 tracking-tight"
             >
-              Get started
+              Contact Us
             </Link>
           </div>
 
