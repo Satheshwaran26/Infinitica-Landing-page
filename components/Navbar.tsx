@@ -28,12 +28,12 @@ export default function Navbar() {
 
        
 
+       
+
           {/* Action Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-          
-         
             <Link
-              href="#get-started"
+              href="/contact"
               className="bg-white text-black border border-white font-semibold text-[15px] px-6 py-2.5 rounded-none hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] active:scale-95 transition-all duration-200 tracking-tight"
             >
               Contact Us
@@ -67,35 +67,35 @@ export default function Navbar() {
         <div className="md:hidden bg-[#0A0A0A] border-b border-white/10 px-4 pt-2 pb-6 space-y-4">
           <div className="flex flex-col space-y-3">
             <Link
-              href="#features"
+              href="/#features"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-zinc-300 hover:text-[#AC58E9] py-2 transition-colors border-l-2 border-transparent hover:border-[#AC58E9] pl-2"
             >
               Features
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-zinc-300 hover:text-[#AC58E9] py-2 transition-colors border-l-2 border-transparent hover:border-[#AC58E9] pl-2"
             >
               About us
             </Link>
             <Link
-              href="#pricing"
+              href="/#pricing"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-zinc-300 hover:text-[#AC58E9] py-2 transition-colors border-l-2 border-transparent hover:border-[#AC58E9] pl-2"
             >
               Pricing
             </Link>
             <Link
-              href="#blog"
+              href="/#about"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-zinc-300 hover:text-[#AC58E9] py-2 transition-colors border-l-2 border-transparent hover:border-[#AC58E9] pl-2"
             >
               Blog
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-base font-medium text-zinc-300 hover:text-[#AC58E9] py-2 transition-colors border-l-2 border-transparent hover:border-[#AC58E9] pl-2"
             >
@@ -104,18 +104,11 @@ export default function Navbar() {
           </div>
           <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <Link
-              href="#profile"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-2 text-zinc-300 hover:text-[#AC58E9] py-2 pl-2"
-            >
-              <User className="w-5 h-5" /> Profile
-            </Link>
-            <Link
-              href="#get-started"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full text-center bg-white text-black border border-white font-semibold py-3 rounded-none hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] transition-colors mt-2"
             >
-              Get started
+              Contact Us
             </Link>
           </div>
         </div>

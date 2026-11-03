@@ -227,7 +227,7 @@ export default function AboutSection() {
             </div>
             
             <Link
-              href="mailto:contact@infinitica.com"
+              href="/contact"
               className="inline-flex items-center justify-between bg-white text-black font-semibold text-sm px-6 py-3.5 border border-white hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] transition-all duration-200 tracking-tight group/btn"
             >
               <span>Contact Our Team</span>
