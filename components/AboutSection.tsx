@@ -21,31 +21,31 @@ const values = [
     title: "Innovation",
     desc: "We keep exploring better ways to solve problems.",
     icon: Lightbulb,
-    tag: "01"
+    tag: ""
   },
   {
     title: "Quality",
     desc: "We build products that are dependable and made to last.",
     icon: ShieldCheck,
-    tag: "02"
+    tag: ""
   },
   {
     title: "Simplicity",
     desc: "Great products should be easy to understand and use.",
     icon: Compass,
-    tag: "03"
+    tag: ""
   },
   {
     title: "Customer Focus",
     desc: "Our customers' feedback shapes everything we make.",
     icon: Users,
-    tag: "04"
+    tag: ""
   },
   {
     title: "Integrity",
     desc: "We are honest, transparent and accountable in all we do.",
     icon: CheckCircle2,
-    tag: "05"
+    tag: ""
   }
 ];
 
@@ -162,7 +162,7 @@ export default function AboutSection() {
                     <span className="text-[10px] font-semibold tracking-widest text-zinc-400 uppercase border border-white/10 px-2.5 py-1 group-hover:border-[#AC58E9] group-hover:text-[#AC58E9] transition-colors">
                       Purpose
                     </span>
-                    <span className="text-2xl font-mono text-zinc-600 group-hover:text-[#AC58E9] transition-colors">01</span>
+                    <span className="text-2xl font-mono text-zinc-600 group-hover:text-[#AC58E9] transition-colors"></span>
                   </div>
                   <h3 className="text-2xl font-medium text-white tracking-tight mb-3">
                     Our Mission
@@ -187,7 +187,7 @@ export default function AboutSection() {
                     <span className="text-[10px] font-semibold tracking-widest text-zinc-400 uppercase border border-white/10 px-2.5 py-1 group-hover:border-[#AC58E9] group-hover:text-[#AC58E9] transition-colors">
                       Future
                     </span>
-                    <span className="text-2xl font-mono text-zinc-600 group-hover:text-[#AC58E9] transition-colors">02</span>
+                    <span className="text-2xl font-mono text-zinc-600 group-hover:text-[#AC58E9] transition-colors"></span>
                   </div>
                   <h3 className="text-2xl font-medium text-white tracking-tight mb-3">
                     Our Vision
