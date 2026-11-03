@@ -2,6 +2,20 @@
 
 import Link from "next/link";
 import { ChevronRight, Infinity } from "lucide-react";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 35 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      delay: i * 0.1,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+    }
+  })
+};
 
 export default function Hero() {
   return (
@@ -17,7 +31,12 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 md:mb-16">
 
           {/* Left Column: Massive Bold Typography */}
-          <div className="lg:col-span-8 flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-8 flex flex-col justify-center"
+          >
             <h1 className="text-[50px] sm:text-[75px] md:text-[90px] lg:text-[110px] font-bold text-white tracking-tighter leading-[0.9] font-sans uppercase">
               INTELLIGENCE<br />
               FOR THE<br />
@@ -30,10 +49,15 @@ export default function Hero() {
                 WORLD
               </span>
             </h1>
-          </div>
+          </motion.div>
 
           {/* Right Column: Editorial Text */}
-          <div className="lg:col-span-4 flex flex-col justify-center lg:pt-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-4 flex flex-col justify-center lg:pt-12"
+          >
             <div className="w-12 h-1 bg-[#AC58E9] mb-8 rounded-none" />
             <h2 className="text-2xl sm:text-3xl font-light text-zinc-300 mb-6 tracking-tight">
               Intelligence. <span className="font-semibold text-[#AC58E9]">Without boundaries.</span>
@@ -41,23 +65,21 @@ export default function Hero() {
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-10 font-light max-w-md border-l-2 border-[#AC58E9]/50 pl-6">
               INFINITICA is a global AI-led product company. We build intelligent products that solve meaningful real-world problems and create measurable human and economic value.
             </p>
-            {/* <Link
-              href="#products"
-              className="inline-flex items-center gap-4 text-black font-semibold hover:bg-[#AC58E9] hover:text-white transition-all duration-300 group w-fit bg-white px-6 py-3 rounded-none border border-white"
-            >
-              See what we do
-              <div className="w-8 h-8 rounded-none bg-black flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
-                <ChevronRight className="w-4 h-4" />
-              </div>
-            </Link> */}
-          </div>
+          </motion.div>
         </div>
 
-        {/* Bottom Section: Editorial Cards Grid */}
+        {/* Bottom Section: Editorial Cards Grid with Scroll Reveal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Card 1: Minimal Dark with Purple Hover */}
-          <div className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-[#1A1A1A] transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9]">
+          <motion.div
+            custom={0}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-[#1A1A1A] transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9]"
+          >
             <div className="relative z-10">
               <span className="inline-block px-3 py-1 rounded-none border border-white/20 text-[10px] font-semibold tracking-widest text-zinc-400 uppercase mb-6 group-hover:text-[#AC58E9] group-hover:border-[#AC58E9] transition-colors">Core Value</span>
               <h3 className="text-2xl sm:text-3xl font-medium text-white tracking-tight leading-tight">
@@ -66,10 +88,17 @@ export default function Hero() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-0" />
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-white/5 rounded-none group-hover:bg-[#AC58E9]/10 transition-all duration-700 border border-white/5 group-hover:border-[#AC58E9]/20" />
-          </div>
+          </motion.div>
 
           {/* Card 2: Minimal Accent */}
-          <div className="group relative h-[450px] sm:h-[500px] bg-[#0A0A0A] border border-white/20 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:border-[#AC58E9] transition-all duration-500 hover:-translate-y-2 hover:shadow-[4px_4px_0_rgba(172,88,233,1)]">
+          <motion.div
+            custom={1}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="group relative h-[450px] sm:h-[500px] bg-[#0A0A0A] border border-white/20 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:border-[#AC58E9] transition-all duration-500 hover:-translate-y-2 hover:shadow-[4px_4px_0_rgba(172,88,233,1)]"
+          >
             <div className="relative z-10">
               <span className="inline-block px-3 py-1 rounded-none border border-[#AC58E9]/40 text-[10px] font-semibold tracking-widest text-white uppercase mb-6 bg-[#AC58E9]/20">Core Value</span>
               <h3 className="text-2xl sm:text-3xl font-medium text-white tracking-tight leading-tight">
@@ -79,10 +108,17 @@ export default function Hero() {
             <div className="absolute bottom-8 right-8 w-20 h-20 rounded-none border border-[#AC58E9] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#AC58E9] transition-all duration-500 bg-[#111]">
               <div className="w-8 h-8 rounded-none border border-[#AC58E9]/50 group-hover:border-white/50" />
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Purple Brutalist Accent */}
-          <div className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-black transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9] hover:shadow-[4px_4px_0_rgba(172,88,233,1)]">
+          <motion.div
+            custom={2}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-black transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9] hover:shadow-[4px_4px_0_rgba(172,88,233,1)]"
+          >
             <div className="relative z-10">
               <span className="inline-block px-3 py-1 rounded-none border border-white/20 text-[10px] font-semibold tracking-widest text-zinc-300 uppercase mb-6 bg-black/50 group-hover:bg-[#AC58E9] group-hover:text-white group-hover:border-[#AC58E9] transition-colors">Core Value</span>
               <h3 className="text-2xl sm:text-3xl font-medium text-white tracking-tight leading-tight">
@@ -95,10 +131,17 @@ export default function Hero() {
             </div>
             <div className="absolute top-1/2 right-[-20%] w-full h-[1px] bg-[#AC58E9]/20 group-hover:bg-[#AC58E9]/50 transition-colors duration-500" />
             <div className="absolute top-[-20%] right-1/4 w-[1px] h-full bg-[#AC58E9]/20 group-hover:bg-[#AC58E9]/50 transition-colors duration-500" />
-          </div>
+          </motion.div>
 
           {/* Card 4: Minimal Grid Focus */}
-          <div className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-[#151515] transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9]">
+          <motion.div
+            custom={3}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="group relative h-[450px] sm:h-[500px] bg-[#111] border border-white/10 rounded-none p-8 flex flex-col justify-start overflow-hidden cursor-pointer hover:bg-[#151515] transition-all duration-500 hover:-translate-y-2 hover:border-[#AC58E9]"
+          >
             <div className="relative z-10">
               <span className="inline-block px-3 py-1 rounded-none border border-white/10 text-[10px] font-semibold tracking-widest text-zinc-400 uppercase mb-6 bg-black/20 group-hover:border-[#AC58E9]/50 transition-colors">Core Value</span>
               <h3 className="text-2xl sm:text-3xl font-medium text-white tracking-tight leading-tight">
@@ -110,12 +153,10 @@ export default function Hero() {
                 <div className="w-40 h-40 border border-white/10 rounded-none flex items-center justify-center bg-white/5 group-hover:bg-[#AC58E9]/10 group-hover:border-[#AC58E9]/20" />
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
     </section>
   );
 }
-
-

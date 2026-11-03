@@ -117,10 +117,7 @@ export default function ContactPage() {
           
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#111] border border-[#AC58E9]/40 text-[#AC58E9] text-xs font-semibold tracking-widest uppercase mb-6">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Contact & Global Presence</span>
-              </div>
+             
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tighter uppercase leading-[0.95] mb-6">
                 Let&apos;s Build <br />
                 <span className="text-[#AC58E9]">Without Boundaries</span>
@@ -140,7 +137,7 @@ export default function ContactPage() {
               {/* Left Column: Interactive Contact Form */}
               <div className="lg:col-span-7 bg-[#0E0E0E] border border-white/10 p-8 sm:p-12 relative">
                 <div className="mb-8">
-                  <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider block mb-2">01 / Direct Transmission</span>
+                  
                   <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white uppercase">
                     Send a Message
                   </h2>
@@ -209,22 +206,7 @@ export default function ContactPage() {
                           className="w-full bg-[#161616] border border-white/10 px-4 py-3.5 text-white text-sm placeholder:text-zinc-600 focus:outline-none focus:border-[#AC58E9] transition-colors rounded-none"
                         />
                       </div>
-                      <div>
-                        <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">
-                          Inquiry Type
-                        </label>
-                        <select
-                          value={formData.inquiryType}
-                          onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                          className="w-full bg-[#161616] border border-white/10 px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#AC58E9] transition-colors rounded-none"
-                        >
-                          <option>Enterprise AI Solutions</option>
-                          <option>Product Inquiries</option>
-                          <option>Strategic Partnership</option>
-                          <option>Media & Press</option>
-                          <option>Careers & Talent</option>
-                        </select>
-                      </div>
+                     
                     </div>
 
                     <div>
@@ -252,276 +234,73 @@ export default function ContactPage() {
                 )}
               </div>
 
-              {/* Right Column: Direct Channels & Operational Info */}
-              <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-                
-                {/* Channel 1: Primary Communications */}
-                <div className="bg-[#111] border border-white/10 p-8 hover:border-[#AC58E9] transition-all group">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider">Communication Lines</span>
-                    <Mail className="w-5 h-5 text-zinc-400 group-hover:text-[#AC58E9] transition-colors" />
+              {/* Right Column: Single Unified Contact Info Card */}
+              <div className="lg:col-span-5 bg-[#0E0E0E] border border-white/10 p-8 sm:p-12 flex flex-col justify-between relative group hover:border-[#AC58E9] transition-all duration-300">
+                {/* Subtle Accent Edge */}
+                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-[#AC58E9]/30 group-hover:border-[#AC58E9] transition-colors pointer-events-none" />
+
+                <div>
+                  <div className="mb-8">
+                   
+                    <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white uppercase">
+                      Contact Details
+                    </h2>
+                    <p className="text-zinc-400 text-sm font-light mt-2 leading-relaxed">
+                      Reach out to us directly or visit our headquarters. We are available for partnerships, enterprise solutions, and general inquiries.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Direct Email Inboxes</h3>
-                  
-                  <div className="space-y-4 text-sm">
-                    <div className="pb-3 border-b border-white/5">
-                      <span className="text-xs text-zinc-500 uppercase block mb-1">General Inquiries</span>
-                      <a href="mailto:contact@infinitica.com" className="text-zinc-200 hover:text-[#AC58E9] transition-colors font-mono">
+
+                  <div className="space-y-6">
+                    {/* Email */}
+                    <div className="pb-5 border-b border-white/5">
+                      <div className="flex items-center gap-2 text-xs  text-[#AC58E9] uppercase tracking-wider mb-2">
+                        <Mail className="w-4 h-4" />
+                        <span>Email Address</span>
+                      </div>
+                      <a
+                        href="mailto:contact@infinitica.com"
+                        className="text-base text-zinc-100 hover:text-[#AC58E9] transition-colors font-sans font-medium block"
+                      >
                         contact@infinitica.com
                       </a>
                     </div>
-                    <div className="pb-3 border-b border-white/5">
-                      <span className="text-xs text-zinc-500 uppercase block mb-1">Enterprise & Sales</span>
-                      <a href="mailto:sales@infinitica.com" className="text-zinc-200 hover:text-[#AC58E9] transition-colors font-mono">
-                        sales@infinitica.com
+
+                    {/* Contact Number */}
+                    <div className="pb-5 border-b border-white/5">
+                      <div className="flex items-center gap-2 text-xs font-sans text-[#AC58E9] uppercase tracking-wider mb-2">
+                        <Phone className="w-4 h-4" />
+                        <span>Contact Number</span>
+                      </div>
+                      <a
+                        href="tel:+14158904210"
+                        className="text-base text-zinc-100 hover:text-[#AC58E9] transition-colors font-sans font-medium block"
+                      >
+                        +1 (415) 890-4210
                       </a>
                     </div>
+
+                    {/* Address */}
                     <div>
-                      <span className="text-xs text-zinc-500 uppercase block mb-1">Press & Media</span>
-                      <a href="mailto:press@infinitica.com" className="text-zinc-200 hover:text-[#AC58E9] transition-colors font-mono">
-                        press@infinitica.com
-                      </a>
+                      <div className="flex items-center gap-2 text-xs  text-[#AC58E9] uppercase tracking-wider mb-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>Headquarters Address</span>
+                      </div>
+                      <div className="text-sm text-zinc-300 font-light leading-relaxed">
+                        <p className="text-white font-medium">Infinitica Technologies Inc.</p>
+                        <p>500 Howard Street, Suite 400</p>
+                        <p>South of Market (SoMa)</p>
+                        <p className="text-zinc-400 font-mono text-xs mt-1">San Francisco, CA 94105, USA</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Channel 2: Telephone & Hours */}
-                <div className="bg-[#111] border border-white/10 p-8 hover:border-[#AC58E9] transition-all group">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider">Telephony & Availability</span>
-                    <Phone className="w-5 h-5 text-zinc-400 group-hover:text-[#AC58E9] transition-colors" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Global Voice Support</h3>
-                  <p className="text-zinc-400 text-sm font-light leading-relaxed mb-4">
-                    Direct phone lines for enterprise accounts and urgent escalations.
-                  </p>
-                  
-                  <div className="space-y-3 font-mono text-sm text-zinc-200">
-                    <div className="flex justify-between items-center py-1.5 border-b border-white/5">
-                      <span className="text-xs text-zinc-400 font-sans">Americas:</span>
-                      <a href="tel:+14158904210" className="hover:text-[#AC58E9]">+1 (415) 890-4210</a>
-                    </div>
-                    <div className="flex justify-between items-center py-1.5 border-b border-white/5">
-                      <span className="text-xs text-zinc-400 font-sans">Asia-Pacific:</span>
-                      <a href="tel:+918045902100" className="hover:text-[#AC58E9]">+91 (80) 4590-2100</a>
-                    </div>
-                    <div className="flex justify-between items-center py-1.5">
-                      <span className="text-xs text-zinc-400 font-sans">EMEA:</span>
-                      <a href="tel:+442079460812" className="hover:text-[#AC58E9]">+44 (20) 7946-0812</a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Response Guarantee Badge */}
-                <div className="bg-gradient-to-r from-[#111] to-[#1A1122] border border-[#AC58E9]/30 p-6 flex items-center gap-4">
-                  <div className="w-10 h-10 border border-[#AC58E9] flex items-center justify-center text-[#AC58E9] shrink-0 bg-[#AC58E9]/10">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">SLA Response Guarantee</h4>
-                    <p className="text-xs text-zinc-400 mt-0.5">
-                      Enterprise inquiries receive guaranteed acknowledgment within 2 hours.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* COMPREHENSIVE ADDRESS & PHYSICAL LOCATIONS SECTION */}
-        <section id="address" className="w-full bg-[#0A0A0A] py-20 lg:py-28 relative">
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-            
-            {/* Section Heading */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10 gap-6">
-              <div>
-                <span className="inline-flex items-center gap-2 text-xs font-mono text-[#AC58E9] uppercase tracking-wider mb-2">
-                  <Building2 className="w-4 h-4" />
-                  Physical Infrastructure & Addresses
-                </span>
-                <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">
-                  Global Office Locations
-                </h2>
-              </div>
-              <p className="text-zinc-400 text-sm sm:text-base max-w-md font-light leading-relaxed">
-                Visit our physical campuses and research labs. In-person meetings are hosted by scheduled appointment.
-              </p>
-            </div>
-
-            {/* City Selector Tabs */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-              {officeLocations.map((office) => {
-                const isActive = activeOffice === office.id;
-                return (
-                  <button
-                    key={office.id}
-                    onClick={() => setActiveOffice(office.id)}
-                    className={`text-left p-6 border transition-all duration-300 relative rounded-none cursor-pointer ${
-                      isActive
-                        ? "bg-[#151515] border-[#AC58E9] shadow-[4px_4px_0_rgba(172,88,233,1)]"
-                        : "bg-[#101010] border-white/10 hover:border-white/30 hover:bg-[#141414]"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`text-[10px] uppercase font-semibold tracking-widest px-2.5 py-0.5 border ${
-                        isActive
-                          ? "bg-[#AC58E9]/20 border-[#AC58E9] text-white"
-                          : "border-white/10 text-zinc-400"
-                      }`}>
-                        {office.badge}
-                      </span>
-                      <MapPin className={`w-4 h-4 ${isActive ? "text-[#AC58E9]" : "text-zinc-500"}`} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white tracking-tight">
-                      {office.city}
-                    </h3>
-                    <p className="text-zinc-400 text-xs mt-1 uppercase tracking-wider font-mono">
-                      {office.country}
-                    </p>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Detailed Address Dossier Card */}
-            <div className="bg-[#111] border border-white/15 p-8 sm:p-12 relative overflow-hidden">
-              {/* Background Geometric Accent */}
-              <div className="absolute top-0 right-0 w-80 h-80 border-b border-l border-white/5 pointer-events-none" />
-              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#AC58E9]/10 blur-3xl pointer-events-none" />
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10">
                 
-                {/* Left Detail Panel: Full Mailing Address & Coordinates */}
-                <div className="lg:col-span-7 space-y-8">
-                  <div>
-                    <div className="flex items-center gap-2 text-xs font-mono text-[#AC58E9] uppercase tracking-wider mb-2">
-                      <Compass className="w-4 h-4" />
-                      <span>Coordinates: {selectedOffice.coordinates}</span>
-                    </div>
-                    <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight mb-2">
-                      {selectedOffice.name}
-                    </h3>
-                    <div className="text-lg sm:text-xl text-zinc-200 font-light leading-snug space-y-1 mt-4 border-l-2 border-[#AC58E9] pl-6">
-                      <p className="font-normal text-white">{selectedOffice.addressLine1}</p>
-                      <p className="text-zinc-300">{selectedOffice.addressLine2}</p>
-                      <p className="text-zinc-400">{selectedOffice.postalCode}</p>
-                      <p className="text-[#AC58E9] font-medium text-base pt-1">{selectedOffice.country}</p>
-                    </div>
-                  </div>
-
-                  {/* Operational Details Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-white/10">
-                    <div>
-                      <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider block mb-1.5 flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-zinc-400" /> Visiting Hours
-                      </span>
-                      <p className="text-sm text-zinc-200 font-mono">
-                        {selectedOffice.hours}
-                      </p>
-                      <p className="text-xs text-zinc-500 mt-1">Visits strictly by prior appointment</p>
-                    </div>
-
-                    <div>
-                      <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider block mb-1.5 flex items-center gap-1.5">
-                        <Layers className="w-3.5 h-3.5 text-zinc-400" /> Transit & Arrival
-                      </span>
-                      <p className="text-sm text-zinc-200 font-light">
-                        {selectedOffice.transit}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Direct Actions */}
-                  <div className="flex flex-wrap items-center gap-4 pt-4">
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${selectedOffice.mapQuery}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-white text-black font-semibold text-xs uppercase tracking-wider px-6 py-3.5 hover:bg-[#AC58E9] hover:text-white hover:border-[#AC58E9] transition-all border border-white rounded-none"
-                    >
-                      <span>Open in Google Maps</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
-
-                    <a
-                      href={`mailto:${selectedOffice.email}`}
-                      className="inline-flex items-center gap-2 bg-[#161616] text-zinc-200 font-medium text-xs uppercase tracking-wider px-6 py-3.5 hover:bg-white hover:text-black transition-all border border-white/15 rounded-none"
-                    >
-                      <span>Email Office Reception</span>
-                      <Mail className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Interactive Radar/Map Frame */}
-                <div className="lg:col-span-5 bg-[#0A0A0A] border border-white/10 p-6 flex flex-col justify-between relative group">
-                  <div className="flex items-center justify-between pb-4 border-b border-white/10 text-xs font-mono text-zinc-400">
-                    <span className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                      Station Live Status
-                    </span>
-                    <span>HUB ID: {selectedOffice.id.toUpperCase()}-09</span>
-                  </div>
-
-                  {/* Stylized Architectural Location Display */}
-                  <div className="my-8 py-8 px-6 border border-white/5 bg-[#0D0D0D] relative flex flex-col items-center justify-center text-center">
-                    <div className="w-16 h-16 border-2 border-[#AC58E9] flex items-center justify-center mb-4 text-[#AC58E9] shadow-[0_0_20px_rgba(172,88,233,0.3)]">
-                      <Globe className="w-8 h-8" />
-                    </div>
-                    <span className="text-xl font-bold tracking-tight text-white uppercase">{selectedOffice.city} Hub</span>
-                    <span className="text-xs font-mono text-[#AC58E9] mt-1">{selectedOffice.coordinates}</span>
-                    <p className="text-xs text-zinc-500 mt-4 max-w-xs font-light">
-                      Security Check-in: Reception Lobby on Floor {selectedOffice.id === "blr" ? "6" : selectedOffice.id === "lon" ? "19" : "4"}. Government-issued photo ID required.
-                    </p>
-                  </div>
-
-                  {/* Local Contacts */}
-                  <div className="space-y-2 text-xs font-mono text-zinc-400 pt-4 border-t border-white/10">
-                    <div className="flex justify-between">
-                      <span className="text-zinc-500">Local Desk:</span>
-                      <span className="text-zinc-200">{selectedOffice.phone}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zinc-500">Security / Logistics:</span>
-                      <span className="text-zinc-200">{selectedOffice.email}</span>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
-
-            {/* Quick Visiting Protocol Notes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="bg-[#111] border border-white/10 p-6">
-                <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider block mb-2">Protocol 01</span>
-                <h4 className="text-base font-semibold text-white mb-2">Appointment First</h4>
-                <p className="text-zinc-400 text-xs font-light leading-relaxed">
-                  To ensure engineering and executive availability, campus visits must be scheduled at least 48 hours in advance.
-                </p>
-              </div>
-
-              <div className="bg-[#111] border border-white/10 p-6">
-                <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider block mb-2">Protocol 02</span>
-                <h4 className="text-base font-semibold text-white mb-2">Visitor Identification</h4>
-                <p className="text-zinc-400 text-xs font-light leading-relaxed">
-                  Building security requires government-issued identification upon sign-in at reception to issue digital security badges.
-                </p>
-              </div>
-
-              <div className="bg-[#111] border border-white/10 p-6">
-                <span className="text-xs font-mono text-[#AC58E9] uppercase tracking-wider block mb-2">Protocol 03</span>
-                <h4 className="text-base font-semibold text-white mb-2">Accessibility & Transit</h4>
-                <p className="text-zinc-400 text-xs font-light leading-relaxed">
-                  All Infinitica facilities offer full ADA/wheelchair accessibility, visitor parking, and immediate proximity to rapid transit.
-                </p>
-              </div>
-            </div>
-
           </div>
         </section>
+
+       
       </main>
 
       <Footer />
